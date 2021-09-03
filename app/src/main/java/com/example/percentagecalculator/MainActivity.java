@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent tel = new Intent(Intent.ACTION_DIAL, Uri.parse(url));
                 startActivity(tel);
                 return true;
-            }else if (url.contains("mailto:")) {
+            }else if (url.contains("mailto:") || url.contains("facebook") || url.startsWith("whatsapp") || url.contains("twitter") || url.contains("linkedin") || url.contains("github")) {
                 view.getContext().startActivity(
                         new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                 return true;
